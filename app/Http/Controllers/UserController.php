@@ -62,7 +62,25 @@ class UserController extends Controller
         return redirect()->back()->withWarning("Email address not registered to any user on this system.");
     }
     public function profile() {
-        return view("account.profile");
+        return view("user.profile");
+    }
+    public function dashboard() {
+        return view("user.dashboard");
+    }
+    public function chats() {
+        return view("user.chats");
+    }
+    public function favorites() {
+        return view("user.favorites");
+    }
+    public function purchases() {
+        return view("user.purchases");
+    }
+    public function searched() {
+        return view("user.profile");
+    }
+    public function viewed() {
+        return view("user.viewed");
     }
     public function post_profile(Request $request) {
         $request->validate([
@@ -81,7 +99,7 @@ class UserController extends Controller
         return redirect()->back()->withSuccessReport("Account updated successfully..");
     }
     public function change_password() {
-        return view("account.change-password");
+        return view("user.change-password");
     }
     public function post_change_password(Request $request) {
         $request->validate([
