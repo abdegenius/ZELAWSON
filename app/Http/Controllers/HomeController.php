@@ -2,24 +2,29 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Property;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index() {
-        return view("index");
+        $total_listings = Property::where("is_live", "1")->count();
+        $featured_listings = Property::where("is_live", "1")->where("status", "approved")->where("is_featured", "1")->orderBy("id", "desc")->take(12)->get();
+        return view("index", [
+            "total_listings" => $total_listings,
+            "featured_listings" => $featured_listings
+        ]);
     }
     public function about() {
-        return view("pages.about-us");
+        return view("page.about-us");
     }
     public function contact() {
-        return view("pages.contact-us");
-    }
-    public function privacy() {
-        return view("pages.privacy-policy");
+        return view("page.contact-us");
     }
     public function terms() {
-        return view("pages.terms-and-conditions");
+        return view("page.terms-and-conditions");
+    }
+    public function privacy() {
+        return view("page.privacy-policy");
     }
 }
-

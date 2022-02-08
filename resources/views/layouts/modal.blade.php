@@ -80,3 +80,29 @@
         </div>
     </div>
 </div>
+
+<div class="mobile_nav_modal modal fade d-md-none" id="mobileNavModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body container pb30 pl0 pr0 pt0">
+                <div class="container">
+                    <div class="row mt30 pl20 pr20">
+                        <div class="col-lg-12">
+                            <div class="user_set_header">
+                                <img class="float-left" src="{{ asset('images/team/e1.png') }}" alt="e1.png">
+                                <p>Darrell Steward <br><span class="address">alitufan@gmail.com</span></p>
+                            </div>
+                            <div class="">
+                                <a class="dropdown-item block active" href="#">My Profile</a>
+                                <a class="dropdown-item block" href="#">Messages</a>
+                                <a class="dropdown-item block" href="#">Purchase history</a>
+                                <a class="dropdown-item block" href="#">Help</a>
+                                <a class="dropdown-item block" href="#">Log out</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

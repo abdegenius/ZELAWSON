@@ -5,8 +5,11 @@
 <script src="{{ asset('js/popper.min.js') }}"></script>
 <script src="{{ asset('js/bootstrap.min.js') }}"></script>
 <script src="{{ asset('js/jquery.mmenu.all.js') }}"></script>
+<script src="{{ asset('js/notiflix.min.js') }}"></script>
 <script src="{{ asset('js/ace-responsive-menu.js') }}"></script>
 <script src="{{ asset('js/bootstrap-select.min.js') }}"></script>
+<script src="{{ asset('js/chart.min.js') }}"></script>
+<script src="{{ asset('js/chart-custome.js') }}"></script>
 <script src="{{ asset('js/isotop.js') }}"></script>
 <script src="{{ asset('js/snackbar.min.js') }}"></script>
 <script src="{{ asset('js/simplebar.js') }}"></script>
@@ -20,8 +23,10 @@
 <script src="{{ asset('js/timepicker.js') }}"></script>
 <script src="{{ asset('js/pricing-slider.js') }}"></script>
 <script src="{{ asset('js/wow.min.js') }}"></script>
+<script src="{{ asset('js/dashboard-script.js') }}"></script>
 <!-- Custom script for all pages -->
 <script src="{{ asset('js/script.js') }}"></script>
+@include("misc.errors")
 </body>
 
 </html>
