@@ -6,9 +6,9 @@
                         <div class="footer_contact_widget">
                             <h4>Contact Us</h4>
                             <ul class="list-unstyled">
-                                <li class="text-white df"><span class="flaticon-map mr15"></span><a href="#">329 Queensberry Street, North Melbourne VIC 3051, Australia.</a></li>
-                                <li class="text-white"><span class="flaticon-phone mr15"></span><a href="#">+123 456 7890</a></li>
-                                <li class="text-white"><span class="flaticon-mail-inbox-app mr15"></span><a href="#">support@houzing.com</a></li>
+                                <li class="text-white df"><span class="flaticon-map mr15"></span><a href="#">Company address</a></li>
+                                <li class="text-white"><span class="flaticon-phone mr15"></span><a href="#">+234 090 0000 0000</a></li>
+                                <li class="text-white"><span class="flaticon-mail-inbox-app mr15"></span><a href="#">support@zelawsonhomes.com</a></li>
                             </ul>
                         </div>
                         <div class="footer_social_widget mt20">
@@ -24,11 +24,9 @@
                         <div class="footer_qlink_widget pl0">
                             <h4>Quick Links</h4>
                             <ul class="list-unstyled">
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Terms & Conditions</a></li>
-                                <li><a href="#">Support Center</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="{{ route('home') }}">Home</a></li>
+                                <li><a href="{{ route('about') }}">About Us</a></li>
+                                <li><a href="{{ route('contact') }}">Contact Us</a></li>
                             </ul>
                         </div>
                     </div>
@@ -36,11 +34,9 @@
                         <div class="footer_qlink_widget pl0">
                             <h4>Properties</h4>
                             <ul class="list-unstyled">
-                                <li><a href="#">Buy</a></li>
-                                <li><a href="#">Rent</a></li>
-                                <li><a href="#">Sell</a></li>
-                                <li><a href="#">Landlords</a></li>
-                                <li><a href="#">New Homes</a></li>
+                                <li><a href="{{ route('property.buy') }}">Buy</a></li>
+                                <li><a href="{{ route('property.rent') }}">Rent</a></li>
+                                <li><a href="{{ route('property.sell') }}">Sell</a></li>
                             </ul>
                         </div>
                     </div>
@@ -64,9 +60,9 @@
                     <div class="col-md-4 col-lg-4">
                         <div class="footer_menu_widget text-right tac-md mt15">
                             <ul>
-                                <li class="list-inline-item"><a href="#">Home</a></li>
-                                <li class="list-inline-item"><a href="#">Privacy policy</a></li>
-                                <li class="list-inline-item"><a href="#">Terms and conditions</a></li>
+                                <li class="list-inline-item"><a href="{{ route('home') }}">Home</a></li>
+                                <li class="list-inline-item"><a href="{{ route('privacy') }}">Privacy policy</a></li>
+                                <li class="list-inline-item"><a href="{{ route('terms') }}">Terms and conditions</a></li>
                             </ul>
                         </div>
                     </div>

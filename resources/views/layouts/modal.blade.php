@@ -33,7 +33,7 @@
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="exampleCheck2">
                                         <label class="custom-control-label" for="exampleCheck2">Remember me</label>
-                                        <a class="btn-fpswd float-right text-thm" href="#">Forgot</a>
+                                        <a class="btn-fpswd float-right text-thm" href="{{ route('reset.password') }}">Forgot</a>
                                     </div>
                                     <button type="submit" class="btn btn-log btn-block btn-thm mt20">Sign in</button>
                                 </form>
@@ -80,7 +80,7 @@
         </div>
     </div>
 </div>
-
+@if(Auth::check())
 <div class="mobile_nav_modal modal fade d-md-none" id="mobileNavModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -94,10 +94,10 @@
                             </div>
                             <div class="">
                                 <a class="dropdown-item block active" href="#">My Profile</a>
-                                <a class="dropdown-item block" href="#">Messages</a>
-                                <a class="dropdown-item block" href="#">Purchase history</a>
-                                <a class="dropdown-item block" href="#">Help</a>
-                                <a class="dropdown-item block" href="#">Log out</a>
+                                <a class="dropdown-item block" href="{{ route('chats') }}">Messages</a>
+                                <a class="dropdown-item block" href="{{ route('purchases') }}">Purchase history</a>
+                                <a class="dropdown-item block" href="{{ route('contact') }}">Help</a>
+                                <a class="dropdown-item block" href="{{ route('logout') }}">Log out</a>
                             </div>
                         </div>
                     </div>
@@ -106,3 +106,4 @@
         </div>
     </div>
 </div>
+@endif

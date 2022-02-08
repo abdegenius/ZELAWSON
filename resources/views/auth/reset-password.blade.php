@@ -12,7 +12,7 @@
                             <input type="email" name="email" class="form-control" id="email" placeholder="Email Address">
                         </div>
                         <div class="custom-control custom-checkbox">
-                            <a class="btn-fpswd float-right text-thm" href="#">Back to login</a>
+                            <a class="btn-fpswd float-right text-thm" href="{{ route('login') }}">Back to login</a>
                         </div>
                         <button type="submit" class="btn btn-signup btn-block btn-danger mb0">CONTINUE</button>
                     </form>

@@ -35,17 +35,24 @@ Route::post('/auth/signup', [UserController::class, "post_signup"])->name("post.
 Route::post('/auth/reset-password', [UserController::class, "post_reset_password"])->name("post.reset.password")->middleware("guest");
 
 
-Route::get('/account/profile', [UserController::class, "profile"])->name("profile")->middleware("auth");
-Route::post('/account/profile', [UserController::class, "post_profile"])->name("post.profile")->middleware("auth");
-Route::get('/account/change-password', [UserController::class, "change_password"])->name("change.password")->middleware("auth");
-Route::post('/account/change-password', [UserController::class, "post_change_password"])->name("post.change.password")->middleware("auth");
-Route::get('/account/logout', [UserController::class, "logout"])->name("logout")->middleware("auth");
+Route::get('/user/profile', [UserController::class, "profile"])->name("profile")->middleware("auth");
+Route::post('/user/profile', [UserController::class, "post_profile"])->name("post.profile")->middleware("auth");
+Route::get('/user/change-password', [UserController::class, "change_password"])->name("change.password")->middleware("auth");
+Route::post('/user/change-password', [UserController::class, "post_change_password"])->name("post.change.password")->middleware("auth");
+Route::get('/user/logout', [UserController::class, "logout"])->name("logout")->middleware("auth");
+Route::get('/user/chats', [UserController::class, "chats"])->name("chats")->middleware("auth");
+Route::get('/user/dashboard', [UserController::class, "dashboard"])->name("dashboard")->middleware("auth");
+Route::get('/user/favorites', [UserController::class, "favorites"])->name("favorites")->middleware("auth");
+Route::get('/user/purchases', [UserController::class, "purchases"])->name("purchases")->middleware("auth");
+Route::get('/user/searched', [UserController::class, "searched"])->name("searched")->middleware("auth");
+Route::get('/user/viewed', [UserController::class, "viewed"])->name("viewed")->middleware("auth");
 
 
 Route::get('/property/all', [PropertyController::class, "all"])->name("property.all");
 Route::get('/property/view/{slug}', [PropertyController::class, "view"])->name("property.view");
 Route::get('/property/for/rent', [PropertyController::class, "rent"])->name("property.rent");
 Route::get('/property/for/sell', [PropertyController::class, "sell"])->name("property.sell");
+Route::get('/property/for/buy', [PropertyController::class, "buy"])->name("property.buy");
 
 Route::get('/wishlists', [WishlistController::class, "index"])->name("wishlists")->middleware("auth");
 Route::get('/property/wishlist/{id}', [WishlistController::class, "add"])->name("wishlist.add")->middleware("auth");

@@ -17,7 +17,7 @@
                         <div class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input" id="exampleCheck2">
                             <label class="custom-control-label" for="exampleCheck2">Remember me</label>
-                            <a class="btn-fpswd float-right text-thm" href="#">Forgot Password</a>
+                            <a class="btn-fpswd float-right text-thm" href="{{ route('reset.password') }}">Forgot Password</a>
                         </div>
                         <button type="submit" class="btn btn-log btn-block btn-thm mt20">Sign in</button>
                     </form>
